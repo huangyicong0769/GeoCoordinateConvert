@@ -10,8 +10,8 @@ using std::move;
 #include "Point.cpp"
 
 class CoordinateConvert{
-    const long double a = 6378137.0, b = 6356752.31424518,
-                      f = (a - b) / a,
+    const long double a = 6378137.0, f = 1/298.257222101,
+                      b = a -  a * f,
                       e2 = f*(2.0 - f),
                       DEG2REG = M_PI / 180;
     public:
